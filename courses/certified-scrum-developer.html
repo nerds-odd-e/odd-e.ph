@@ -1,0 +1,85 @@
+---
+layout: default
+title: Certified Scrum Developer Course by Odd-e Philippines
+description: The Certified Scrum Developer course by Odd-e Philippines, the premiere Scrum course in the Philippines. 
+---
+<section>
+	<header>
+		<h1>Certified Scrum Developer&reg; Course</h1>
+	</header>
+</section>
+<section class="about">
+  <h2>Course Summary</h2>
+	<p>
+		During this one-week Scrum Developer course, the participants shall get a feel of what it is like to be on a Scrum team. They will go through a one-week sprint in which they build a small application. The course is structured so that there are small lecture-introduction of practices. Of which, is immediately followed up by putting them into practice in the said application. This structure is as close to <a href="/services/agile-coaching.html">agile coaching</a> as you can get within a one-week training.
+  </p>
+	<p>
+		The course is five days long, of which there is about 30% lecture and 70% exercise. The course covers Scrum practices such as Sprint Planning, Backlog Refinement, working as a team and a lot of technical practices such as Test-Driven Development, Continuous Integration, Acceptance Test-Driven Development, and Refactoring. It also covers how to apply these practices in a legacy codebase situation.
+	</p>	
+	<p>
+		Participants who are not <a href="/courses/certified-scrum-master.html">Certified ScrumMasters</a>&reg; or <a href="/courses/certified-scrum-product-owner.html">Certified Scrum Product Owners</a>&reg; are required to attend the <a href="/courses/introduction-to-scrum.html">Introduction to Scrum</a> workshop prior to participating in this class. Special rates shall apply.
+	</p>
+	<p>
+		The course shall use <strong>Java</strong> as the main technology. Though not required, it is recommended that participants have knowledge in such.
+	</p>
+	<p>
+		Participants completing this course shall be duly acknowledged as <a href="http://www.scrumalliance.org/CSD">Certified Scrum Developers&reg;</a>.
+	</p>
+	<h2>Course Objective</h2>
+	<p>
+		The course covers:</p>
+	<ul><li>Requirement workshop / A-TDD<li>SCM, Build Automation and other tools<li>Sprint Planning<li>Pair Programming<li>Continuous Integration and CI Systems<li>Test-Driven Development<li>Working in teams<li>Collective Code Ownership<li>Mocking<li>Code Smells and Refactoring<li>Good unit tests<li>Thinking about Design<li>Working with Legacy Code<li>Craftsmanship<li>Retrospective</ul>
+	<h2>Target Audience</h2>
+	<p>
+		This course is suitable for developers, especially using Java technology, who would like to learn and apply Scrum. 
+	</p>
+  <h2>Schedule</h2>
+	{% if site.categories.certified-scrum-developer %}
+	<table class="schedule wider_screen">
+	  <thead>
+			<tr>
+			  <th>Date</th>
+			  <th>Course</th>
+			  <th>Location</th>
+			  <th></th>
+			</tr>
+		</thead>
+		<tbody>
+      {% for post in site.categories.certified-scrum-developer reversed %}
+	    <tr>
+				<td>{{post.schedule}}</td>
+				<td>{{post.course}}</td>
+				<td>{{post.location}}</td>
+				<td><a href="{{post.url}}">More Info</a></td>
+			</tr>
+	    {% endfor %} 
+			</tr>
+		</tbody>
+	</table>
+  <table class="schedule narrower_screen">
+	  <thead>
+			<tr>
+			  <th>Date</th>
+			  <th>Course</th>
+			  <th>Location</th>
+			</tr>
+		</thead>
+		<tbody>
+      {% for post in site.categories.certified-scrum-developer reversed %}
+	    <tr>
+				<td>{{post.schedule}}</td>
+				<td><a href="{{post.url}}">{{post.course}}</a></td>
+				<td>{{post.location}}</td>
+			</tr>
+	    {% endfor %} 
+			</tr>
+		</tbody>
+	</table>
+	{% else %}
+    {% include course-unavailable.html %}	
+	{% endif %}
+	{% include invite-other-courses.html %}
+</section>
+{% include mailing-list.html %}	
+
+

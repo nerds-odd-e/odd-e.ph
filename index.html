@@ -1,0 +1,118 @@
+---
+layout: default
+title: Odd-e Philippines - Certified Scrum Trainings, Agile Software Development Coaching, Software Craftsmanship Mentorship in the Philippines. 
+description: Odd-e Philippines offers high-end services with regard to Agile Software Development, Scrum, Lean/Kanban, Software Engineering and Craftsmanship, Product Development, and Organizational Management. 
+---
+
+<div id="hero">
+	<h1>Best of breed Agile Software Development, Scrum, and XP Training, Coaching, Engineering and Product Development in the Philippines</h1>
+</div>
+<section id="offerings">
+		
+		<article class="offering">
+			<div class="photo"> 
+			  <img src="/img/training.jpg" alt="Training" width="280" height="150" />
+	 	  </div>
+			<header>
+				<h2><a href="/courses">Premium Trainings</a></h2>
+			</header>
+			<p>
+				We conduct various trainings including Certified ScrumMaster&reg;, Certified Scrum Product Owner&reg;, Certified Scrum Developer&reg;, Agile Fundamentals, and Software Engineering Workshops.
+			</p>
+			<div class="call_for_action">
+        <a href="/courses" title="Agile and Certified Scrum Trainings and Workshops">Learn More</a>				
+			</div>	
+		</article>	
+
+    <article class="offering">
+			<div class="photo"> 
+			  <img src="/img/coaching.jpg" alt="Agile Coaching" width="280" height="150" />
+	 	  </div>
+			<header>
+				<h2><a href="/services/agile-coaching.html">Agile Coaching</a></h2>
+			</header>
+			<p>
+			We work closely with organizations at different levels to improve product development, increase software quality, and accelerate towards Agile transformation.	
+			</p>
+      <div class="call_for_action">
+        <a href="/services/agile-coaching.html" title="Agile Coaching">Learn More</a>				
+			</div>
+		</article>
+
+    <article class="offering">
+			<div class="photo"> 
+			  <img src="/img/engineering.jpg" alt="Software Engineering" width="280" height="150" />
+	 	  </div>
+			<header>
+				<h2><a href="/services">And More</a></h2>
+			</header>
+			<p>
+         Organizations can leverage on our experience and skills in product development and software engineering to deliver better overall value and timely delivery.
+			</p>
+			<div class="call_for_action">
+        <a href="/services" title="Software Engineering and Product Development">Learn More</a>				
+			</div>
+		</article>
+</section>
+{% if site.posts %}
+<div class="divider">&nbsp;</div>
+<section class="courses_list">
+	<h2>Public Courses</h2>
+  {% if site.posts == empty %}
+  <p>We are cooking up an even better set of public certification courses in the Philippines by 1st Quarter of 2016. In the meantime, feel free to <a href="/contact">contact us</a> for private and custom trainings and other services. Or visit our trainings available <a href="http://www.odd-e.com/course-schedule/">elsewhere in Asia.</a></p>
+  {% else  %}
+	<table class="schedule wider_screen">
+	  <thead>
+			<tr>
+			  <th>Date</th>
+			  <th>Course</th>
+			  <th>Location</th>
+			  <th></th>
+			</tr>
+		</thead>
+		<tbody>
+      {% for post in site.posts reversed %}
+			{% if forloop.index == 15 %}
+			  {% break %}
+			{% endif %}	
+
+	    <tr>
+				<td>{{post.schedule}}</td>
+				<td>{{post.course}}</td>
+				<td>{{post.location}}</td>
+				<td><a href="{{post.url}}">More Info</a></td>
+			</tr>
+	    {% endfor %} 
+			</tr>
+		</tbody>
+	</table>
+  <table class="schedule narrower_screen">
+	  <thead>
+			<tr>
+			  <th>Date</th>
+			  <th>Course</th>
+			  <th>Location</th>
+			</tr>
+		</thead>
+		<tbody>
+      {% for post in site.posts reversed %}
+			{% if forloop.index == 5 %}
+			  {% break %}
+			{% endif %}	
+
+	    <tr>
+				<td>{{post.schedule}}</td>
+				<td><a href="{{post.url}}">{{post.course}}</a></td>
+				<td>{{post.location}}</td>
+			</tr>
+	    {% endfor %} 
+			</tr>
+		</tbody>
+	</table>
+	<div class="call_for_action">
+		<a href="/courses/schedule.html">See Full Schedule</a>
+	</div>
+  {% endif %}
+</section>
+{% endif %}
+
