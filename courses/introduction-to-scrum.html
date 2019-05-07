@@ -1,93 +1,31 @@
 ---
 layout: default
-title: Introduction to Scrum Workshop by Odd-e Philippines 
-description: The Introduction to Scrum Workshop by Odd-e Philippines is a ScrumAlliance Endorsed Course under the ScrumAlliance REP program. This one day course provides attendees with enough knowledge to start using Scrum. 
+title: Introduction to Scrum Workshop by Odd-e Philippines
+description: This one-day Introduction to Scrum workshop covers Agile Software Development, with a focus on the Scrum Framework and working in teams.
 ---
+
 <section>
-	<header>
-		<h1>
-			Introduction to Scrum 
-    </h1> 
-	</header>
+  <header>
+    <h1>
+      Introduction to Scrum
+    </h1>
+  </header>
 </section>
 <section class="about">
-	<h2>Course Summary</h2>
-	<p>
-		This one day Introduction to Scrum course covers the Scrum framework including a full explanation and open discussion about the goals and importance of the roles, meetings, and artifacts in Scrum. It aims to provide participants with enough knowledge for them to start doing Scrum in their organizations.
-	</p>
-	<p>
-		The course covers the five core concepts for competing on change, iterative development, the benefits of Scrum, the product backlog, and the activities inside a Sprint. Participants shall learn working in iterations and working as part of a team. 
-	</p>
-	<p>
-		This course counts as one day towards the <a href="http://www.scrumalliance.org/CSD">Certified Scrum Developer</a> qualification. Please refer to our highly-regarded <a href="http://odd-e.com/courseDescription.php?id=csdJava">Certified Scrum Developer course</a> for further details.
-	</p>
-	<p>
-		This course is endorsed by the <a href="http://www.scrumalliance.org">Scrum Alliance&reg;</a> as part of the <a href="http://www.scrumalliance.org/pages/scrum_alliance_rep">Scrum Alliance Registered Education Provider (REP)&#8480</a> program. 
-  </p>
-	<p>
-		This course is offered as a public training workshop. It is also available for private and corporate set up. <a href="/contact-us">Contact us</a> for more info.
-	</p>
-	<h2>Course Objective</h2>
-	<p>The course is a one-day workshop which aims for the participants to:</p>
+  <h2>Course Summary</h2>
+  <p>This one-day Introduction to Scrum workshop covers Agile Software Development, with a focus on the Scrum Framework and working in teams.</p>
+  <p>The course is structure to answer the questions What, Why, and How: What is Agile? Why do we need to be Agile? How can we be Agile? Scrum, done properly, is one way to become Agile. We go beyond the roles, events, and artifacts of Scrum to understand the thinking behind Scrum, and how we can best use Scrum as a team in our organization.</p>
+  <p>The course is designed to be activity and discussion driven, with attendees forming groups of 4 people to learn what Agile and Scrum is. Each course is maximum 16 participants, and we recommend that the entire Scrum Team, with the support teams attend together to have a shared understanding and experience on Scrum.</p>
+
+  <h2>Agenda</h2>
   <ul>
-    <li>Understand the five core concepts and how they enable competing on change</li>	
-    <li>Apply iterative development and timeboxing</li>		
-    <li>Explain the benefits of Scrum</li>		
-		<li>Provide an overview of the Scrum framework and its roles and responsibilities</li>	
-		<li>Apply Scrum</li>  
-		<li>Be aware that technical practices are important, Scrum can be scaled up, and changes in the organization are likely</li>	
-	</ul>	
-  <h2>Target Audience</h2>  
-	<p>Anyone who want to learn and use Scrum for their software projects. Previous experience and knowledge in Agile Software Development and Scrum is not a prerequisite.
-	</p>
-	<p>This course is also a required prerequisite to Odd-e's <a href="/courses/certified-scrum-developer.html">Certified Scrum Developer course</a>. As well as optional prerequisite to <a href="/courses/certified-scrum-master.html">Certified ScrumMaster</a> and <a href="/courses/certified-scrum-product-owner.html">Certified Scrum Product Owner</a> courses.
-	</p>
-	<h2>Schedule</h2>
-  {% if site.categories.intro-to-scrum %}
-	<table class="schedule wider_screen">
-	  <thead>
-			<tr>
-			  <th>Date</th>
-			  <th>Course</th>
-			  <th>Location</th>
-			  <th></th>
-			</tr>
-		</thead>
-		<tbody>
-      {% for post in site.categories.intro-to-scrum reversed %}
-	    <tr>
-				<td>{{post.schedule}}</td>
-				<td>{{post.course}}</td>
-				<td>{{post.location}}</td>
-				<td><a href="{{post.url}}">More Info</a></td>
-			</tr>
-	    {% endfor %} 
-			</tr>
-		</tbody>
-	</table>
-  <table class="schedule narrower_screen">
-	  <thead>
-			<tr>
-			  <th>Date</th>
-			  <th>Course</th>
-			  <th>Location</th>
-			</tr>
-		</thead>
-		<tbody>
-      {% for post in site.categories.intro-to-scrum reversed %}
-	    <tr>
-				<td>{{post.schedule}}</td>
-				<td><a href="{{post.url}}">{{post.course}}</a></td>
-				<td>{{post.location}}</td>
-			</tr>
-	    {% endfor %} 
-			</tr>
-		</tbody>
-	</table>
-  {% else %}
-    {% include course-unavailable.html %}	
-	{% endif %}
-	{% include invite-other-courses.html %}
-	<p>Please <a href="/contact-us">contact us</a> to arrange for private and corporate workshops.</p>
+    <li>Scrum: Theory, Values, Roles, Events, Artifacts</li>
+    <li>Teams, Iterations, Value</li>
+    <li>Complexity</li>
+    <li>Agile: History, Manifesto, Values, Principles</li>
+  </ul>
+
+  <h2>Schedule</h2>
+  <p><a href="/contact-us">Contact us</a> to arrange for private and corporate workshops.</p>
 </section>
-{% include mailing-list.html %}	
+{% include mailing-list.html %}
