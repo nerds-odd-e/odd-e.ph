@@ -1,4 +1,6 @@
-_site
+.bundle/
+.jekyll-cache/
+_site/
 *.swp
 *.swo
 *.DS_*
