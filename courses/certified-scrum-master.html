@@ -1,0 +1,85 @@
+---
+layout: default
+title: Certified ScrumMaster Course by Odd-e Philippines
+description: The Certified ScrumMaster course by Odd-e Philippines, the premiere Scrum course in the Philippines. 
+---
+<section>
+	<header>
+		<h1>Certified ScrumMaster&reg; Course</h1>
+	</header>
+</section>
+<section class="about">
+  <h2>Course Summary</h2>
+	<p>
+  The Certified ScrumMaster&reg; course covers the what, how, and especially the whys of the Scrum framework for product development -- from theory to practice. The course is structured around stories and discussions and is targeted to anyone who wants a deep understanding of Scrum. This includes team members, Product Owners, ScrumMasters, and other stakeholders. Most of the course is given from the ScrumMasters perspective.
+	</p>	
+	<p>
+		Following completion, participants will be asked to take an online test as part of the <a href="http://www.scrumalliance.org/pages/CSM">Certified ScrumMaster&reg; certification</a>. You will be notified by email about this test from the ScrumAlliance. The test concentrates on the fundamentals of Scrum. 
+	</p>
+	<p>
+		For members of the Project Management Institute, you shall be credited PDUs after successful completion of the course.
+	</p>
+	<h2>Course Objective</h2>
+	<p>
+		By the end of the course, participants will be able to:</p>
+	<ul>
+		<li>Understand the basic concepts on which Scrum is built on.</li>
+		<li>Explain the responsibilities of the three Scrum roles and how they relate.</li>
+		<li>Start adopting Scrum in the organization and adapting the organization to Scrum.</a>
+		<li>Understand the impact of Scrum to existing organizations.</li>
+		<li>Start your journey as a master of Scrum, perhaps in the ScrumMaster role.</li>
+		<li>Apply Scrum. Facilitate Scrum meetings and creation of Scrum artifacts.</li>
+		<li>Support a team and help them to become a self-managing team.</li>
+	</ul>
+	<h2>Target Audience</h2>
+	<p>
+		Anyone who is involved in Scrum, either as team member, Product Owner, ScrumMaster or manager of an organization adopting or using Scrum. The course does have a special focus on the ScrumMaster role.
+	</p>
+  <h2>Schedule</h2>
+  {% if site.categories.certified-scrum-master %}
+	<table class="schedule wider_screen">
+	  <thead>
+			<tr>
+			  <th>Date</th>
+			  <th>Course</th>
+			  <th>Location</th>
+			  <th></th>
+			</tr>
+		</thead>
+		<tbody>
+      {% for post in site.categories.certified-scrum-master reversed %}
+	    <tr>
+				<td>{{post.schedule}}</td>
+				<td>{{post.course}}</td>
+				<td>{{post.location}}</td>
+				<td><a href="{{post.url}}">More Info</a></td>
+			</tr>
+	    {% endfor %} 
+			</tr>
+		</tbody>
+	</table>
+  <table class="schedule narrower_screen">
+	  <thead>
+			<tr>
+			  <th>Date</th>
+			  <th>Course</th>
+			  <th>Location</th>
+			</tr>
+		</thead>
+		<tbody>
+      {% for post in site.categories.certified-scrum-master reversed %}
+	    <tr>
+				<td>{{post.schedule}}</td>
+				<td><a href="{{post.url}}">{{post.course}}</a></td>
+				<td>{{post.location}}</td>
+			</tr>
+	    {% endfor %} 
+			</tr>
+		</tbody>
+	</table>
+	{% else %}
+    {% include course-unavailable.html %}	
+	{% endif %}
+	{% include invite-other-courses.html %}
+</section>
+{% include mailing-list.html %}	

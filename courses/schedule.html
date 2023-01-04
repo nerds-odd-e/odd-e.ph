@@ -1,0 +1,60 @@
+---
+layout: default
+title: Schedule of Public Courses, Trainings, and Workshops for Agile, Certified Scrum, XP, and Software Engineering by Odd-e Philippines 
+description: Schedule of public courses, trainings, and workshops. Odd-e Philippines offers the best Certified Scrum, Agile, XP, and Software Engineering Trainings and Workshops in the country. 
+---
+<section>
+  <header>
+		<h1>Public Workshops and Training Schedule<br/>in the Philippines</h1>
+  </header>
+</section>
+<section class="about">
+{% if site.posts != empty %}
+	<table class="schedule wider_screen">
+	  <thead>
+			<tr>
+			  <th>Date</th>
+			  <th>Course</th>
+			  <th>Location</th>
+			  <th></th>
+			</tr>
+		</thead>
+		<tbody>
+      {% for post in site.posts reversed %}
+	    <tr>
+				<td>{{post.schedule}}</td>
+				<td>{{post.course}}</td>
+				<td>{{post.location}}</td>
+				<td><a href="{{post.url}}">More Info</a></td>
+			</tr>
+	    {% endfor %} 
+			</tr>
+		</tbody>
+	</table>
+  <table class="schedule narrower_screen">
+	  <thead>
+			<tr>
+			  <th>Date</th>
+			  <th>Course</th>
+			  <th>Location</th>
+			</tr>
+		</thead>
+		<tbody>
+      {% for post in site.posts reversed %}
+	    <tr>
+				<td>{{post.schedule}}</td>
+				<td><a href="{{post.url}}">{{post.course}}</a></td>
+				<td>{{post.location}}</td>
+			</tr>
+	    {% endfor %} 
+			</tr>
+		</tbody>
+	</table>
+{% else %}
+  <p>We are currently working on bringing you the best possible courses we can offer. Rest assured we will update this page when we've got something going on.</p>
+{% endif %}
+  <p>
+		Visit our <a href="/courses">courses page</a> to learn more about the various training programs we are offering.
+	</p>
+</section>
+{% include mailing-list.html %}	
